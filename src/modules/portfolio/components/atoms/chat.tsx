@@ -15,18 +15,15 @@ const Chat: React.FC<Props> = ({ className }) => {
   const [input, setInput] = useState("");
   const chatRef = useRef<HTMLDivElement>(null);
 
-  // Open & close modal handlers
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  // Auto-scroll to the latest message
   useEffect(() => {
     if (chatRef.current) {
       chatRef.current.scrollTop = chatRef.current.scrollHeight;
     }
   }, [messages]);
 
-  // Send message
   const sendMessage = () => {
     if (input.trim()) {
       setMessages([...messages, input]);
@@ -36,7 +33,6 @@ const Chat: React.FC<Props> = ({ className }) => {
 
   return (
     <>
-      {/* Chat Button */}
       <CustomButton
         onClick={openModal}
         className={`${isDarkTheme ? "bg-gray-800 text-white hover:bg-gray-700" : "bg-gray-200 text-black hover:bg-gray-300 shadow-gray-500"} ${className}`}
@@ -44,7 +40,6 @@ const Chat: React.FC<Props> = ({ className }) => {
         <BiChat />
       </CustomButton>
 
-      {/* Chat Modal */}
       <Modal
         title="Live Chat"
         open={isModalOpen}
@@ -53,7 +48,6 @@ const Chat: React.FC<Props> = ({ className }) => {
         className={`${isDarkTheme ? "dark" : ""}`}
       >
         <div className={`flex flex-col h-80 ${isDarkTheme ? "bg-gray-900 text-white" : "bg-white"}`}>
-          {/* Chat Messages */}
           <div
             ref={chatRef}
             className="flex-1 overflow-y-auto p-3 space-y-2 border-b border-gray-300"
@@ -76,7 +70,6 @@ const Chat: React.FC<Props> = ({ className }) => {
             )}
           </div>
 
-          {/* Chat Input */}
           <div className="p-3 flex items-center gap-2">
             <Input
               value={input}
