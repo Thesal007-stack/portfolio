@@ -21,7 +21,7 @@ const HeroSection = () => {
         <Text variant="p" color="text-orange-500 text-3xl font-bold">
           Expert on
         </Text>
-        <Text variant="p" color={`${isDarkTheme ? 'text-white font-bold':'text-black font-bold'}  `}>Based in Netherlands</Text>
+        <Text variant="p" color={`${isDarkTheme ? 'text-white font-bold':'text-black font-bold'}  `}>Based in Cambodia</Text>
         <Text variant="p" color={`${isDarkTheme ? 'text-white':'text-black'}  `}>I'm developer and UI/UX designer.</Text>
         <Text variant="p" color={`${isDarkTheme ? 'text-white':'text-black'}  `}>
           Hey are looking for designer to build your brand and grow your
