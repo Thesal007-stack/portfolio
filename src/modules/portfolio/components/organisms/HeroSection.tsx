@@ -1,37 +1,123 @@
+
+
+
 import Image from "../atoms/Image";
 import Text from "../atoms/Text";
 import CallToAction from "../molecules/CallToAction";
-import CustomButton from "../atoms/custom-button"
+import CustomButton from "../atoms/custom-button";
 import { useTheme } from "../../../../shared/hooks/ThemeContext";
+import { motion } from "framer-motion"; 
 const HeroSection = () => {
-    const { isDarkTheme } = useTheme();
+  const { isDarkTheme } = useTheme();
+
   return (
-    <section className="flex font-mono gap-5 items-center justify-between p-10  text-white">
-      <div className="flex flex-col space-y-5">
-        <Text variant="h1" color="text-red-500">
-          Hi, I'm  Jenni Kim
-        </Text>
-        <Text variant="p"  color={`${isDarkTheme ? 'text-white font-bold  ':'text-black font-bold'}  `}>
-          Front-end Developer
-        </Text>
-        <CallToAction/>
+    <section
+      className={`flex font-mono flex-col md:flex-row justify-center items-center gap-6 p-4 md:p-10  `}
+    >
+      <div className="w-full md:w-1/3 flex flex-col justify-center items-center space-y-4 md:items-start md:space-y-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Text variant="h1" color="text-red-500">
+            Hi, I'm Jenni Kim
+          </Text>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <Text
+            variant="p"
+            color={`${isDarkTheme ? "text-white font-bold" : "text-black font-bold"}`}
+          >
+            Front-end Developer
+          </Text>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <CallToAction />
+        </motion.div>
       </div>
-      <Image src="https://cdn140.picsart.com/348572043017211.png" alt="Visal" className="w-1/3" />
-      <div className="text-left space-y-5">
-        <Text variant="p" color="text-orange-500 text-3xl font-bold">
-          Expert on
-        </Text>
-        <Text variant="p" color={`${isDarkTheme ? 'text-white font-bold':'text-black font-bold'}  `}>Based in Cambodia</Text>
-        <Text variant="p" color={`${isDarkTheme ? 'text-white':'text-black'}  `}>I'm developer and UI/UX designer.</Text>
-        <Text variant="p" color={`${isDarkTheme ? 'text-white':'text-black'}  `}>
-          Hey are looking for designer to build your brand and grow your
-          business? let's shake hands with me.
-        </Text>
-        <CustomButton>
-          Download CV
-        </CustomButton>
+
+      {/* Center Column (Image) - Full width on mobile, 1/3 on desktop */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+        className="w-full md:w-1/3 flex justify-center"
+      >
+        <Image
+          src="https://cdn140.picsart.com/348572043017211.png"
+          alt="Jenni Kim"
+          className="w-full max-w-xs md:max-w-md rounded-lg shadow-md object-cover"
+        />
+      </motion.div>
+
+      {/* Right Column (Text) - Centered on mobile, aligned left on desktop */}
+      <div className="w-full md:w-1/3 flex flex-col justify-center items-center md:items-start space-y-4 md:space-y-6">
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <Text
+            variant="p"
+            color="text-orange-500 text-3xl font-bold md:text-2xl"
+          >
+            Expert on
+          </Text>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+        >
+          <Text
+            variant="p"
+            color={`${isDarkTheme ? "text-white font-bold" : "text-black font-bold"}`}
+          >
+            Based in Cambodia
+          </Text>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+        >
+          <Text
+            variant="p"
+            color={`${isDarkTheme ? "text-white" : "text-black"}`}
+          >
+            I'm developer and UI/UX designer.
+          </Text>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
+        >
+          <Text
+            variant="p"
+            color={`${isDarkTheme ? "text-white" : "text-black"}`}
+          >
+            Hey are looking for designer to build your brand and grow your
+            business? let's shake hands with me.
+          </Text>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 1.6 }}
+        >
+          <CustomButton>Download CV</CustomButton>
+        </motion.div>
       </div>
-  
     </section>
   );
 };

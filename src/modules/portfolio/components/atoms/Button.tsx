@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'default'; // Add more variants as needed
+  variant?: 'primary' | 'default'; 
   className?: string;
-  to?: string; // Optional prop for routing
+  to?: string; 
   onClick?: () => void;
 }
 
@@ -16,11 +16,10 @@ const Button: React.FC<ButtonProps> = ({
   to,
   onClick,
 }) => {
-  const baseClasses = "px-4 py-2 rounded font-semibold transition-colors duration-300";
-  const variantClasses = variant === 'primary' ? 'bg-red-500 text-white hover:bg-red-600' : 'bg-gray-800 text-white hover:bg-gray-700';
+  const baseClasses = "py-2 px-10 rounded font-semibold transition-colors duration-300";
+  const variantClasses = variant === 'primary' ? 'bg-red-500 text-white hover:bg-red-600 ' : 'bg-gray-800 text-white hover:bg-gray-700';
 
   if (to) {
-    // Render as a Link if 'to' prop is provided
     return (
       <Link
         to={to}

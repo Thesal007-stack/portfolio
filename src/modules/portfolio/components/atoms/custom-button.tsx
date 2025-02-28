@@ -13,7 +13,7 @@ interface ButtonProps {
     className,
   }) => {
     const variantStyle = {
-      primary: "bg-primary shadow-md shadow-blue-300 hover:bg-primary-600",
+      primary: "bg-primary  shadow-md shadow-blue-300 hover:bg-primary-600",
       secondary: "bg-secondary hover:bg-secondary-600",
       danger: "bg-red-500 shadow-md shadow-red-300 hover:bg-red-600",
       default: "bg-black-500 shadow-sm shadow-pink-500 hover:bg-black-600"
@@ -28,7 +28,6 @@ interface ButtonProps {
         text="white"
         font="bold mono"
         border="rounded-full "
-        // shadow="md blue-300"
         transition="color"
       >
         {children}

@@ -5,9 +5,10 @@ interface TextProps {
   children: React.ReactNode;
   variant?: 'h1' | 'h2' | 'p';
   color?: string;
+  className?: string;
 }
 
-const Text: React.FC<TextProps> = ({ children, variant = 'p', color = 'text-white' }) => {
+const Text: React.FC<TextProps> = ({ children, variant = 'p', color = 'text-white' ,className}) => {
   const variantStyles = {
     h1: 'text-4xl font-bold',
     h2: 'text-2xl font-semibold',
@@ -22,10 +23,11 @@ const Text: React.FC<TextProps> = ({ children, variant = 'p', color = 'text-whit
 
   return (
     <motion.div
-      className={`${variantStyles[variant]} ${color}`}
+      className={`${variantStyles[variant]} ${color} ${className}`}
       initial="hidden"
       animate="visible"
       variants={textVariants}
+      
     >
       {children}
     </motion.div>
