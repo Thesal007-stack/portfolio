@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
       githubUrl: "https://github.com/yourusername/developer-portfolio",
       liveUrl: "https://yourportfolio.com",
       image:
-        "https://th.bing.com/th/id/OIP.VpYsJdLXSMr54R4foMQsHgAAAA?rs=1&pid=ImgDetMain",
+        "https://th.bing.com/th/id/OIP.bZB08oTF2nGZupEexk_kjAHaHa?rs=1&pid=ImgDetMain",
     },
     {
       id: "proj-2",
@@ -32,14 +32,14 @@ const Projects: React.FC = () => {
     },
     {
       id: "proj-3",
-      title: "Task Manager App",
-      description: "A productivity tool built with React and Firebase.",
-      technologies: ["React", "Firebase", "TypeScript"],
-      githubUrl: "https://github.com/yourusername/task-manager",
-      liveUrl: "https://taskmanager.yourdomain.com",
-      image:
-        "https://th.bing.com/th/id/OIP.L63q1u9bbS-Opxqhsl6jAQAAAA?rs=1&pid=ImgDetMain",
-    },
+      title: "coming soon...",
+      description:
+        "Finalizing content and layout. Ready for commit soon.",
+      technologies: ["N/A"],
+      githubUrl: "https://github.com/yourusername/e-commerce",
+      liveUrl: "https://ecommerce.yourdomain.com",
+      image: "https://th.bing.com/th?id=OIP.fxKHYo2WIEoEGu9gl1-S9QHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2",
+    }
   ];
 
   return (
