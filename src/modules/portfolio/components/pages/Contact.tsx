@@ -7,17 +7,11 @@ import { useTheme } from "../../../../shared/hooks/ThemeContext";
 import CustomButton from "../atoms/custom-button";
 import { SendOutlined } from "@ant-design/icons";
 
-interface FormValues {
-  name: string;
-  email: string;
-  message: string;
-}
-
 const Contact: React.FC = () => {
   const { isDarkTheme } = useTheme(); 
   const [form] = Form.useForm();
 
-  const onFinish = (values: FormValues) => {
+  const onFinish = () => {
     form.resetFields(); 
   };
 
