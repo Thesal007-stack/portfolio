@@ -1,28 +1,24 @@
-
-
-
 import Image from "../atoms/Image";
 import Text from "../atoms/Text";
 import CallToAction from "../molecules/CallToAction";
 import CustomButton from "../atoms/custom-button";
 import { useTheme } from "../../../../shared/hooks/ThemeContext";
-import { motion } from "framer-motion"; 
+import visal from "../../../../assets/visal1.png";
+import { motion } from "framer-motion";
+
 const HeroSection = () => {
   const { isDarkTheme } = useTheme();
 
   return (
     <section
-      className={`flex font-mono flex-col md:flex-row justify-center items-center gap-6 p-4 md:p-10  `}
-    >
+      className={`flex font-mono flex-col md:flex-row justify-center items-center gap-6 p-4 md:p-10  `}>
       <div className="w-full md:w-1/3 flex flex-col justify-center items-center space-y-4 md:items-start md:space-y-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <Text variant="h1" color="text-red-500">
-            Hi, I'm Jenni Kim
-          </Text>
+          <Text variant="h1" color="text-red-500">Hi, I'm Visal</Text>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,21 +41,32 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Center Column (Image) - Full width on mobile, 1/3 on desktop */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="w-full md:w-1/3 flex justify-center"
+        className="w-full md:w-1/3 flex justify-center relative" 
+        whileHover={{ scale: 1.1 }} 
+        whileTap={{ scale: 0.95 }}
       >
         <Image
-          src="https://cdn140.picsart.com/348572043017211.png"
-          alt="Jenni Kim"
+          src={visal}
+          alt="Visal torn"
           className="w-full max-w-xs md:max-w-md rounded-lg shadow-md object-cover"
         />
+        <motion.div
+          className={`absolute inset-0 bg-${
+            isDarkTheme ? "black/30" : "white/30"
+          } rounded-lg flex items-center justify-center text-${
+            isDarkTheme ? "white" : "black"
+          } opacity-0 hover:opacity-100 transition-opacity duration-300`}
+          initial={{ opacity: 0 }}
+          whileHover={{ opacity: 1 }} 
+          transition={{ duration: 0.3 }}
+        >
+        </motion.div>
       </motion.div>
 
-      {/* Right Column (Text) - Centered on mobile, aligned left on desktop */}
       <div className="w-full md:w-1/3 flex flex-col justify-center items-center md:items-start space-y-4 md:space-y-6">
         <motion.div
           initial={{ opacity: 0, x: 20 }}
@@ -94,7 +101,7 @@ const HeroSection = () => {
             variant="p"
             color={`${isDarkTheme ? "text-white" : "text-black"}`}
           >
-            I'm developer and UI/UX designer.
+           I'm a front-end developer
           </Text>
         </motion.div>
         <motion.div
@@ -106,8 +113,7 @@ const HeroSection = () => {
             variant="p"
             color={`${isDarkTheme ? "text-white" : "text-black"}`}
           >
-            Hey are looking for designer to build your brand and grow your
-            business? let's shake hands with me.
+          Need a developer to bring your ideas to life and grow your business? Let's work together!
           </Text>
         </motion.div>
         <motion.div

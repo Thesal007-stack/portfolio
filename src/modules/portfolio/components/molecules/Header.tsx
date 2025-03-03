@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Text from "../atoms/Text";
 import { Link, useLocation } from "react-router-dom";
-import { SunOutlined, MoonOutlined, MenuOutlined } from "@ant-design/icons"; 
+import { SunOutlined, MoonOutlined, MenuOutlined } from "@ant-design/icons";
 import { useTheme } from "../../../../shared/hooks/ThemeContext";
 
 const Header: React.FC = () => {
@@ -132,6 +132,20 @@ const Header: React.FC = () => {
               Blog
             </Link>
           </li>
+          <li>
+            <Link
+              to="/projects"
+              className={`block py-2 px-4 text-gray-400 hover:text-${
+                isDarkTheme ? "white" : "black"
+              } ${
+                location.pathname === "/projects"
+                  ? "bg-white text-black rounded-full transition-colors duration-300"
+                  : ""
+              }`}
+            >
+              Projects
+            </Link>
+          </li>
         </ul>
       </nav>
       <Text
@@ -139,7 +153,7 @@ const Header: React.FC = () => {
         color={isDarkTheme ? "text-gray-400" : "text-gray-600"}
         className="hidden md:block"
       >
-        hellotazrin@gmail.com
+        visaltorn38@gmail.com
       </Text>
     </header>
   );

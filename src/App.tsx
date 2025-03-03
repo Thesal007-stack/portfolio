@@ -7,6 +7,7 @@ import Skills from "./modules/portfolio/components/pages/skill";
 import ExperienceEducation from "./modules/portfolio/components/pages/ExperienceEducation";
 import TechStack from "./modules/portfolio/components/pages/TechStack";
 import Blog from "./modules/portfolio/components/pages/Blog";
+import Projects from "./modules/portfolio/components/pages/Projects";
 
 const App: React.FC = () => {
   return (
@@ -23,6 +24,8 @@ const App: React.FC = () => {
               <Route path="/experience-education" element={<ExperienceEducation />} />
               <Route path="/tech-stack" element={<TechStack />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/projects" element={<Projects />} />
+
             </Routes>
           </main>
         </div>

@@ -10,7 +10,7 @@ const DefaultLayout: React.FC<LayoutProps> = ({ children }) => {
   const { isDarkTheme } = useTheme();
 
   return (
-    <div className={` flex flex-col min-h-screen    ${isDarkTheme ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
+    <div className={` flex flex-col min-h-screen font-mono    ${isDarkTheme ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
          <Header />
       <main className="flex-1">
         {children}
