@@ -42,9 +42,16 @@ const ExperienceEducation: React.FC = () => {
     {
       title: "Volunteer Teacher",
       company: "Rupp",
-      duration: "Rupp, 3 Months",
+      duration: "3 Months",
       description:
         "I volunteer as a teacher at the Royal University of Phnom Penh, where I instruct first-year students in C++.",
+    },
+    {
+      title: "Internship",
+      company: "Wing Bank",
+      duration: "6 Months",
+      description:
+        "I internship as a Front-end Developer at the Wing Bank.",
     },
   ];
 

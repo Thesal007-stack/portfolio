@@ -3,10 +3,10 @@ import DefaultLayout from "../templates/DefaultLayout";
 import { Card, List, Avatar } from "antd";
 import {
   CodeOutlined,
-  ToolOutlined,
-  DatabaseOutlined,
-  CloudOutlined,
 } from "@ant-design/icons";
+import { CgStyle } from "react-icons/cg";
+import { FaReact } from "react-icons/fa";
+import { IoLibraryOutline } from "react-icons/io5";
 import { useTheme } from "../../../../shared/hooks/ThemeContext";
 import Text from "../atoms/Text";
 
@@ -30,27 +30,27 @@ const TechStack: React.FC = () => {
     const newTechItems: TechItem[] = [
       {
         id: `item-${techStack.length + 1}`,
-        name: `React ${techStack.length + 1}`,
-        category: "Frameworks & Libraries",
-        icon: ToolOutlined,
+        name: `React ${techStack}`,
+        category: "Frameworks",
+        icon: FaReact,
       },
       {
         id: `item-${techStack.length + 2}`,
-        name: `JavaScript ${techStack.length + 2}`,
+        name: `TypeScript ${techStack}`,
         category: "Programming Languages",
         icon: CodeOutlined,
       },
       {
         id: `item-${techStack.length + 3}`,
-        name: `MongoDB ${techStack.length + 3}`,
-        category: "Databases",
-        icon: DatabaseOutlined,
+        name: `Tailwind CSS & UNO CSS ${techStack}`,
+        category: "Style",
+        icon: CgStyle,
       },
       {
         id: `item-${techStack.length + 4}`,
-        name: `AWS ${techStack.length + 4}`,
-        category: "Tools & Platforms",
-        icon: CloudOutlined,
+        name: `Ant Design & React Icon ${techStack}`,
+        category: "Libraries",
+        icon: IoLibraryOutline,
       },
     ];
     setTechStack([...techStack, ...newTechItems]);
@@ -59,17 +59,26 @@ const TechStack: React.FC = () => {
 
   useEffect(() => {
     loadMoreData();
-  },[]);
+  }, []);
 
   return (
     <DefaultLayout>
-      <section>
+      <section
+        className={`flex-1 w-full`}
+      >
         <div className="p-10">
           <Text
             variant="h1"
             color={isDarkTheme ? "text-orange-500" : "text-yellow-500"}
           >
             My Tech Stack
+          </Text>
+          <Text
+            variant="p"
+            color={isDarkTheme ? "text-white" : "text-black"}
+            className="mt-4 text-lg md:text-xl"
+          >
+            These are the technologies I used to build my Developer Portfolio Blog, showcasing my expertise in modern web development.
           </Text>
           <div
             id="scrollableDiv"

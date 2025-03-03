@@ -5,7 +5,7 @@ import CustomButton from "../atoms/custom-button";
 import { useTheme } from "../../../../shared/hooks/ThemeContext";
 import visal from "../../../../assets/visal1.png";
 import { motion } from "framer-motion";
-
+import { DownloadOutlined  } from "@ant-design/icons";
 const HeroSection = () => {
   const { isDarkTheme } = useTheme();
 

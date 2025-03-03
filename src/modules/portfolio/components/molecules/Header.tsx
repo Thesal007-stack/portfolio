@@ -89,21 +89,6 @@ const Header: React.FC = () => {
           </li>
           <li>
             <Link
-              to="/skills"
-              onClick={() => setIsMenuOpen(false)}
-              className={`block py-2 px-4 text-gray-400 hover:text-${
-                isDarkTheme ? "white" : "black"
-              } ${
-                location.pathname === "/skills"
-                  ? "bg-white text-black rounded-full transition-colors duration-300"
-                  : ""
-              }`}
-            >
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link
               to="/tech-stack"
               onClick={() => setIsMenuOpen(false)}
               className={`block py-2 px-4 text-gray-400 hover:text-${
@@ -117,6 +102,22 @@ const Header: React.FC = () => {
               TechStack
             </Link>
           </li>
+          <li>
+            <Link
+              to="/skills"
+              onClick={() => setIsMenuOpen(false)}
+              className={`block py-2 px-4 text-gray-400 hover:text-${
+                isDarkTheme ? "white" : "black"
+              } ${
+                location.pathname === "/skills"
+                  ? "bg-white text-black rounded-full transition-colors duration-300"
+                  : ""
+              }`}
+            >
+              Skills
+            </Link>
+          </li>
+     
           <li>
             <Link
               to="/blog"
@@ -144,6 +145,20 @@ const Header: React.FC = () => {
               }`}
             >
               Projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/contact"
+              className={`block py-2 px-4 text-gray-400 hover:text-${
+                isDarkTheme ? "white" : "black"
+              } ${
+                location.pathname === "/contact"
+                  ? "bg-white text-black rounded-full transition-colors duration-300"
+                  : ""
+              }`}
+            >
+              Contact
             </Link>
           </li>
         </ul>

@@ -8,13 +8,13 @@ import ExperienceEducation from "./modules/portfolio/components/pages/Experience
 import TechStack from "./modules/portfolio/components/pages/TechStack";
 import Blog from "./modules/portfolio/components/pages/Blog";
 import Projects from "./modules/portfolio/components/pages/Projects";
+import Contact from "./modules/portfolio/components/pages/Contact";
 
 const App: React.FC = () => {
   return (
     <ThemeProvider> 
       <Router>
         <div className="flex flex-col"
-        // className={` flex flex-col ${isDarkTheme ? "bg-black text-white" : "bg-white text-black"}`}
         >
           <main className="flex-1"
           >
@@ -25,6 +25,7 @@ const App: React.FC = () => {
               <Route path="/tech-stack" element={<TechStack />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
 
             </Routes>
           </main>

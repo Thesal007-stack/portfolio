@@ -1,11 +1,11 @@
 import DefaultLayout from "../templates/DefaultLayout";
 import Card from "../atoms/Card";
-import { CodeOutlined, LinkOutlined } from "@ant-design/icons"; // Ant Design icons for projects
+import { CodeOutlined, LinkOutlined } from "@ant-design/icons"; 
 import { useTheme } from "../../../../shared/hooks/ThemeContext";
 import Text from "../atoms/Text";
 
 const Projects: React.FC = () => {
-  const { isDarkTheme } = useTheme(); // Use the theme context
+  const { isDarkTheme } = useTheme(); 
 
   const projects = [
     {

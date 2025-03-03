@@ -30,7 +30,6 @@ const Button: React.FC<ButtonProps> = ({
     );
   }
 
-  // Render as a regular button if no 'to' prop
   return (
     <button
       className={`${baseClasses} ${variantClasses} ${className}`}
