@@ -2,6 +2,7 @@ import DefaultLayout from "../templates/DefaultLayout";
 import Card from "../atoms/Card";
 import { CodeOutlined, LinkOutlined } from "@ant-design/icons"; 
 import { useTheme } from "../../../../shared/hooks/ThemeContext";
+import sabairok from '../../../../assets/sabairok.jpg'
 import Text from "../atoms/Text";
 
 const Projects: React.FC = () => {
@@ -21,14 +22,13 @@ const Projects: React.FC = () => {
     },
     {
       id: "proj-2",
-      title: "E-commerce Platform",
+      title: "Cam-formant",
       description:
-        "An online store with React, Node.js, and MongoDB integration.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+        "Cam-Formant is a job search platform that helps users find new employment opportunities in Cambodia..",
+      technologies: ["React","Next.js","Node.js","Expressjs","Tsoa","MongoDB", "AWS"],
       githubUrl: "https://github.com/yourusername/e-commerce",
       liveUrl: "https://ecommerce.yourdomain.com",
-      image:
-        "https://th.bing.com/th/id/OIP.Xm4PWg5wdHxhRFGGKyTvbgHaHa?rs=1&pid=ImgDetMain",
+      image: sabairok,
     },
     {
       id: "proj-3",

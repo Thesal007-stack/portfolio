@@ -49,7 +49,7 @@ const About: React.FC = () => {
                 color={isDarkTheme ? "text-white" : "text-black"}
                 className="mt-4 text-lg md:text-xl"
               >
-                I’m Visal, a passionate front-end developer based in Phnom Penh, Cambodia. With expertise in React, and TypeScript, I create intuitive and responsive web applications that drive user engagement. My journey began with a Bachelor’s in Computer Science at RUPP, followed by hands-on experience at Tech Solutions Inc. and Wing Bank. I’m dedicated to empowering businesses with cutting-edge digital solutions.
+                I’m Visal, a passionate front-end developer based in Phnom Penh, Cambodia. With expertise in React, and TypeScript, I create intuitive and responsive web applications that drive user engagement. My journey began with a Bachelor’s in Computer Science at RUPP, followed by hands-on experience at  Wing Bank. I’m dedicated to empowering businesses with cutting-edge digital solutions.
               </Text>
               <Text
                 variant="p"

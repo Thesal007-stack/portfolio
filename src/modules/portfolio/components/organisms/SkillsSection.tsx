@@ -9,15 +9,16 @@ import {
   FaServer,
   FaDatabase,
 } from "react-icons/fa";
-
+import { RiTailwindCssFill } from "react-icons/ri";
 const SkillsSection: React.FC = () => {
   const { isDarkTheme } = useTheme();
   const skills = [
     { name: "React & Next.js", icon: FaReact, label: "Frontend" },
     { name: "Node.js & Express.js", icon: FaNodeJs, label: "Backend" },
+    { name: "Tailwind Css & UnoCss", icon: RiTailwindCssFill, label: "Style" },
     { name: "Full-Stack Development", icon: FaLaptopCode, label: "Development" },
     { name: "API & Server Management", icon: FaServer, label: "Backend" },
-    { name: "Database & ORM", icon: FaDatabase, label: "Database" },
+    { name: "SQL & Mongo DB", icon: FaDatabase, label: "Database" },
   ];
 
   return (
