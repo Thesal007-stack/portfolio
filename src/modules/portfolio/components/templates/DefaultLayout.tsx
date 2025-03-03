@@ -19,7 +19,7 @@ const DefaultLayout: React.FC<LayoutProps> = ({ children }) => {
       <Header />
       <main className="flex-1">{children}</main>
       <SocialLinks />
-      <VersionModule version={"1.0.0"}/>
+      <VersionModule version={"1.0.1"}/>
     </div>
   );
 };

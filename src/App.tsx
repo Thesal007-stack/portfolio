@@ -9,6 +9,7 @@ import TechStack from "./modules/portfolio/components/pages/TechStack";
 import Blog from "./modules/portfolio/components/pages/Blog";
 import Projects from "./modules/portfolio/components/pages/Projects";
 import Contact from "./modules/portfolio/components/pages/Contact";
+import AboutMe from "./modules/portfolio/components/pages/AboutMe";
 
 const App: React.FC = () => {
   return (
@@ -25,6 +26,7 @@ const App: React.FC = () => {
               <Route path="/tech-stack" element={<TechStack />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/about-me" element={<AboutMe />} />
               <Route path="/contact" element={<Contact />} />
 
             </Routes>

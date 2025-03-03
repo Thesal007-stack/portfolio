@@ -6,7 +6,7 @@ type Props ={
   className?: string;
 }
 const CallToAction: React.FC<Props> = ({className}) => {
-  return <Button variant="primary" to="/experience-education" className={className}>About Me <span>→</span></Button>;
+  return <Button variant="primary" to="/about-me" className={className}>About Me <span>→</span></Button>;
 };
 
 export default CallToAction;

@@ -102,6 +102,7 @@ const Header: React.FC = () => {
               TechStack
             </Link>
           </li>
+  
           <li>
             <Link
               to="/skills"
@@ -145,6 +146,21 @@ const Header: React.FC = () => {
               }`}
             >
               Projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/experience-education"
+              onClick={() => setIsMenuOpen(false)}
+              className={`block py-2 px-4 text-gray-400 hover:text-${
+                isDarkTheme ? "white" : "black"
+              } ${
+                location.pathname === "/experience-education"
+                  ? "bg-white text-black rounded-full transition-colors duration-300"
+                  : ""
+              }`}
+            >
+              Experience & Education
             </Link>
           </li>
           <li>

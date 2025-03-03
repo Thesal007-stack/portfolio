@@ -20,9 +20,9 @@ const Blog: React.FC = () => {
       icon: RocketOutlined,
     },
     {
-      title: "UI/UX Design",
-      description: "Intuitive designs to enhance user experience with Figma and Adobe XD.",
-      icon: BulbOutlined,
+      title: "Teaching Front-end and C++",
+      description: "Expert instruction in front-end development with React, TypeScript, and C++ programming for robust applications.",
+      icon: BulbOutlined, 
     },
     {
       title: "Consulting",
