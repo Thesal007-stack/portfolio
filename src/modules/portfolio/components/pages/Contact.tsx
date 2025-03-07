@@ -34,14 +34,10 @@ const Contact: React.FC = () => {
 
   const emailAddress = "visaltorn38@gmail.com"; 
 
-  // Phnom Penh coordinates
-
   return (
     <DefaultLayout>
       <section
-        className={`flex-1 w-full ${
-          isDarkTheme ? "bg-black text-white" : "bg-white text-black"
-        }`}
+        className={`flex-1 w-full`}
       >
         <div className="p-4 md:p-6 lg:p-10">
           <Text
