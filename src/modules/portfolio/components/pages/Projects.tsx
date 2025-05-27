@@ -32,13 +32,23 @@ const Projects: React.FC = () => {
     },
     {
       id: "proj-3",
-      title: "coming soon...",
+      title: "Realestate",
       description:
-        "Finalizing content and layout. Ready for commit soon.",
-      technologies: ["N/A"],
-      githubUrl: "https://github.com/yourusername/e-commerce",
-      liveUrl: "https://ecommerce.yourdomain.com",
-      image: "https://th.bing.com/th?id=OIP.fxKHYo2WIEoEGu9gl1-S9QHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2",
+        "Developed a responsive web application that displays a list of houses for rent or sale, allowing users to browse available properties with key details like price, location, and features.",
+      technologies: ["Angular", "Tailwind CSS", "React Icons"],
+      githubUrl: "https://github.com/Thesal007-stack/angular-realestate/tree/master",
+      liveUrl: "https://realestate-angular.netlify.app",
+      image: "https://th.bing.com/th/id/OIP.bdgPN9W5aGVZfowTFMKHwAHaE7?cb=iwp2&rs=1&pid=ImgDetMain",
+    },
+    {
+      id: "proj-4",
+      title: "Flow Builder",
+      description:
+        "Built a web-based visual Flow Builder tool to allow users to create, edit, and manage logical workflows using an intuitive drag-and-drop interface.",
+      technologies: ["React", "Tailwind CSS", "Lucide Icons", "React Flow"],
+      githubUrl: "https://github.com/Thesal007-stack/node-flow/tree/master",
+      liveUrl: "https://visal-nodeflow.netlify.app",
+      image: "https://th.bing.com/th/id/OIP.YvY-JRqafwm07WaqsZUKpQHaEK?cb=iwp2&rs=1&pid=ImgDetMain",
     }
   ];
 

@@ -2,6 +2,7 @@ import React from "react";
 import Text from "../atoms/Text";
 import { Card } from "antd";
 import { useTheme } from "../../../../shared/hooks/ThemeContext";
+
 import {
   FaReact,
   FaNodeJs,
@@ -10,15 +11,29 @@ import {
   FaDatabase,
 } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { SiTypescript, SiAngular,SiAntdesign  } from "react-icons/si"; // SiAngular exists
+import { TbTopologyStar3 } from "react-icons/tb";
 const SkillsSection: React.FC = () => {
   const { isDarkTheme } = useTheme();
   const skills = [
     { name: "React & Next.js", icon: FaReact, label: "Frontend" },
+    { name: "Angular", icon: SiAngular, label: "Frontend Framework" },
+    { name: "TypeScript", icon: SiTypescript, label: "Superset of JavaScript" },
+    { name: "React Flow", icon: TbTopologyStar3, label: "Flow-based UI" },
+    { name: "Ant Design", icon: SiAntdesign, label: "UI Component Library" },
     { name: "Node.js & Express.js", icon: FaNodeJs, label: "Backend" },
-    { name: "Tailwind Css & UnoCss", icon: RiTailwindCssFill, label: "Style" },
-    { name: "Full-Stack Development", icon: FaLaptopCode, label: "Development" },
+    {
+      name: "Tailwind CSS & UnoCSS",
+      icon: RiTailwindCssFill,
+      label: "Styling Frameworks",
+    },
+    {
+      name: "Full-Stack Development",
+      icon: FaLaptopCode,
+      label: "Development",
+    },
     { name: "API & Server Management", icon: FaServer, label: "Backend" },
-    { name: "SQL & Mongo DB", icon: FaDatabase, label: "Database" },
+    { name: "SQL & MongoDB", icon: FaDatabase, label: "Database" },
   ];
 
   return (
@@ -33,10 +48,18 @@ const SkillsSection: React.FC = () => {
             <Card
               key={index}
               title={<span className="text-gray-500">{skill.name}</span>}
-              className={`mt-4 rounded-lg shadow-md font-mono font-bold border-none transition-shadow duration-300 ${isDarkTheme ? "bg-gray-800 text-white" : "bg-gray-300 text-black"}`}
+              className={`mt-4 rounded-lg shadow-md font-mono font-bold border-none transition-shadow duration-300 ${
+                isDarkTheme
+                  ? "bg-gray-800 text-white"
+                  : "bg-gray-300 text-black"
+              }`}
             >
               <div className="relative">
-                <div className={`absolute -top-16 left-1/2 transform -translate-x-1/2 w-14 h-14 rounded-md ${isDarkTheme ? "bg-blue-900" : "bg-blue-200"} flex items-center justify-center`}>
+                <div
+                  className={`absolute -top-16 left-1/2 transform -translate-x-1/2 w-14 h-14 rounded-md ${
+                    isDarkTheme ? "bg-blue-900" : "bg-blue-200"
+                  } flex items-center justify-center`}
+                >
                   <IconComponent className="text-white text-2xl" />
                 </div>
                 <div className="mt-14 text-center">

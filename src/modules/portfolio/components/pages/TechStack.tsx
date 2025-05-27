@@ -34,6 +34,7 @@ const TechStack: React.FC = () => {
         category: "Frameworks",
         icon: FaReact,
       },
+   
       {
         id: `item-${techStack.length + 2}`,
         name: `TypeScript ${techStack}`,

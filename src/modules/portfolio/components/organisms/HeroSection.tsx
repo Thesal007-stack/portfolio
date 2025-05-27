@@ -133,7 +133,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 1.6 }}
         >
           <a
-            href="/resume.pdf" 
+            href="/torn-visal.pdf" 
             download="resume.pdf" 
             className={`inline-block ${
               isDarkTheme
